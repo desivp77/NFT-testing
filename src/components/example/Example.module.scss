@@ -1,8 +1,8 @@
 @use "../../styles/colors";
 
 .wrapper {
-  padding: 100px;
-  background-color: colors.$primary_main;
+  padding: 0px;
+  background-color: colors.$background_default;
 }
 
 .container {
@@ -18,4 +18,36 @@
   position: relative;
   top: 180px;
   text-align: center;
+}
+
+.default {
+  background-image: url('../../../public/images/logo.svg');
+}
+
+.muted {
+  background-image: url('../../../public/images/logo-muted.svg');
+}
+
+@media (min-width: 1536px) {
+  .css-ispybl-MuiContainer-root {
+    max-width: 100%;
+}
+}
+
+.css-ispybl-MuiContainer-root {
+  width: 100%;
+  margin-left: auto;
+  box-sizing: border-box;
+  margin-right: auto;
+  display: block;
+  padding: 0 10%;
+}
+
+.customSearch {
+  position: relative;
+  border-radius: 50px;
+  background-color: rgb(0 0 0);
+  margin-right: 24px;
+  margin-left: 0;
+  width: 100%;
 }
