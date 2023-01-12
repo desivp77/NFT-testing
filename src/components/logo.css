@@ -1,0 +1,9 @@
+.default {
+    /* background-image: url('../../../public/images/logo.svg'); */
+    background-color: blue;
+  }
+  
+  .muted {
+    /* background-image: url('../../../public/images/logo-muted.svg'); */
+    background-color: green;
+  }
