@@ -1,20 +1,33 @@
 import * as React from "react";
-import Link from 'next/link';
-import Image from 'next/image';
+import { useState } from 'react'
+import ReactDOM from 'react-dom';
+import LogoDefault from "./LogoDefault";
+import LogoMuted from "./LogoMuted";
+ 
 
-let imageStatus = {
-  muted: 'logo-muted.svg',
-  default: 'logo.svg'
-}
+export default function Logo({type}) {
 
-export default function LogoMuted() {
+  // const [state, setState] = useState({type: "default"})
+
   return (
-         <Link href="/about">
-         <Image src="/images/logo.svg" 
-         height={80}  
-         width={80} 
-         alt="Logo" />
-         </Link>
+         <div>
+         <LogoDefault type="default"/>
+         <LogoMuted type="muted"/>
+         </div>
   );
 }
 
+
+// export default function Logo({type}) {
+// const [state, setState] = useState('default')
+
+//   return (
+//     <div>
+//       {state === 'default' && (
+//         <LogoDefault addType={() => setState('muted') } />
+//       )}
+
+//       {state === 'muted' && <LogoMuted />}
+//     </div>
+//   )
+//       }

@@ -1,20 +1,34 @@
 import * as React from "react";
-import Link from 'next/link';
 import Image from 'next/image';
+ 
 
-let imageStatus = {
-  muted: 'logo-muted.svg',
-  default: 'logo.svg'
-}
+// The Logo must have a prop named type with a default value of default
+// The default logo must be displayed when no prop is passed
+// The muted logo must be displayed when the type prop is muted
 
-export default function LogoMuted() {
+export default function LogoMuted({type}) {
   return (
-         <Link href="/about">
-         <Image src="/images/${imageStatus.value}" 
+         <Image src="/images/logo-muted.svg" 
+         {...type}
+        //  onClick={props.addType}
          height={144}  
          width={144} 
          alt="Logo" />
-         </Link>
   );
 }
 
+// function LoggedOutUser(props) {
+//   return <div>
+//      <h1>Sign in, please! </h1>
+//      <span>Log out </span>
+//    </div>;
+// }
+
+
+ 
+
+// const LogoMuted = (props) => {
+//   return <button onClick={props.addTrip}>Add a trip</button>
+// }
+
+// export default LogoMuted
