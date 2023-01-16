@@ -11,7 +11,7 @@ export default function Logo({type}) {
 
   return (
          <div>
-         <LogoDefault type="default"/>
+         <LogoDefault type=""/>
          <LogoMuted type="muted"/>
          </div>
   );
