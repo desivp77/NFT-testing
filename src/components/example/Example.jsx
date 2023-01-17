@@ -16,13 +16,13 @@ export default function Copyright() {
             Hi
           </Link>
           <Avatar1/>
-          <User 
+          {/* <User 
             name=""
             info=""
             avatar=""
             size="55"
             verified="false"
-         />
+         /> */}
         </Paper>
     </div>
   );

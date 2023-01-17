@@ -1,33 +1,30 @@
 import * as React from "react";
-import { useState } from 'react'
-import ReactDOM from 'react-dom';
-import LogoDefault from "./LogoDefault";
-import LogoMuted from "./LogoMuted";
- 
+import Image from 'next/image';
 
-export default function Logo() {
-
-  // const [state, setState] = useState({type: "default"})
-
+function LogoImg({ type = "default", backgroundImg }) {
   return (
-         <div>
-         <LogoDefault type=""/>
-         <LogoMuted type="muted"/>
-         </div>
+    <Image 
+    type={type}
+    src={backgroundImg}
+    height={144}  
+    width={144} 
+    alt="Logo" />
   );
 }
 
+export default function Logo() {
+  return (
+        <div>
+        <LogoImg 
+        type={undefined}
+        backgroundImg={'/images/logo.svg'}
+        />
 
-// export default function Logo({type}) {
-// const [state, setState] = useState('default')
+        <LogoImg 
+        type={"muted"}
+        backgroundImg={'/images/logo-muted.svg'}
+        />
+        </div>
+  );
+}
 
-//   return (
-//     <div>
-//       {state === 'default' && (
-//         <LogoDefault addType={() => setState('muted') } />
-//       )}
-
-//       {state === 'muted' && <LogoMuted />}
-//     </div>
-//   )
-//       }
