@@ -5,7 +5,7 @@ import LogoDefault from "./LogoDefault";
 import LogoMuted from "./LogoMuted";
  
 
-export default function Logo({type}) {
+export default function Logo() {
 
   // const [state, setState] = useState({type: "default"})
 

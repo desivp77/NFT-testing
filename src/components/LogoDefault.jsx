@@ -3,11 +3,11 @@ import Image from 'next/image';
 
 
 
-export default function LogoDefault({type}) {
+export default function LogoDefault(props) {
  
   return (
          <Image src="/images/logo.svg" 
-         {...type}
+         {...props.type}
         //  onClick={props.addType}
          height={144}  
          width={144} 

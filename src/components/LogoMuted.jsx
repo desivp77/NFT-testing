@@ -6,10 +6,10 @@ import Image from 'next/image';
 // The default logo must be displayed when no prop is passed
 // The muted logo must be displayed when the type prop is muted
 
-export default function LogoMuted({type}) {
+export default function LogoMuted(props) {
   return (
          <Image src="/images/logo-muted.svg" 
-         {...type}
+         {...props.type}
         //  onClick={props.addType}
          height={144}  
          width={144} 
